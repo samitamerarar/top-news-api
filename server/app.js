@@ -34,7 +34,7 @@ app.get("/TopHeadlines", (req, res) => {
         console.log(error);
         console.log(response);
         console.log(body);
-        res.send("error");
+        res.send(error);
       }
     }
   );
@@ -65,7 +65,7 @@ app.get("/SearchResults", (req, res) => {
         console.log(error);
         console.log(response);
         console.log(body);
-        res.send("error");
+        res.send(error);
       }
     }
   );
