@@ -23,6 +23,6 @@ jobs:
       - name: Connect and run docker
         run:
           ssh ${{ secrets.SERVER1_SSH_USER }}@${{ secrets.SERVER1_SSH_HOST }} "cd ${{ secrets.SERVER1_WORK_DIR }} &&
-          sudo docker-compose up -d && exit"
+          sudo docker-compose up -d --no-deps --build server && exit"
       - name: Cleanup
         run: rm -rf ~/.ssh

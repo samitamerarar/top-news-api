@@ -28,12 +28,10 @@ app.get("/TopHeadlines", (req, res) => {
   request(
     options,
     function (error, response, body) {
+      console.log(error);
       if (!error && response.statusCode == 200) {
         res.send(body);
       } else {
-        console.log(error);
-        console.log(response);
-        console.log(body);
         res.send(error);
       }
     }
@@ -59,12 +57,10 @@ app.get("/SearchResults", (req, res) => {
   request(
     options,
     function (error, response, body) {
-      if (!error && response.statusCode == 200) {
+      if (!error && response.statusCode == 200) {        
+        console.log(error);
         res.send(body);
       } else {
-        console.log(error);
-        console.log(response);
-        console.log(body);
         res.send(error);
       }
     }
