@@ -28,7 +28,6 @@ app.get("/TopHeadlines", (req, res) => {
   request(
     options,
     function (error, response, body) {
-      console.log(error);
       if (!error && response.statusCode == 200) {
         res.send(body);
       } else {
@@ -57,8 +56,7 @@ app.get("/SearchResults", (req, res) => {
   request(
     options,
     function (error, response, body) {
-      if (!error && response.statusCode == 200) {        
-        console.log(error);
+      if (!error && response.statusCode == 200) {
         res.send(body);
       } else {
         res.send(error);
