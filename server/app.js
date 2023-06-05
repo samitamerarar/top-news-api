@@ -31,6 +31,9 @@ app.get("/TopHeadlines", (req, res) => {
       if (!error && response.statusCode == 200) {
         res.send(body);
       } else {
+        console.log(error)
+        console.log(response)
+        console.log(body)
         res.send("error");
       }
     }
@@ -59,6 +62,9 @@ app.get("/SearchResults", (req, res) => {
       if (!error && response.statusCode == 200) {
         res.send(body);
       } else {
+        console.log(error)
+        console.log(response)
+        console.log(body)
         res.send("error");
       }
     }
