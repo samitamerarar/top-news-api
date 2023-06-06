@@ -29,7 +29,7 @@ app.get("/TopHeadlines", (req, res) => {
     options,
     function (error, response, body) {
       console.log(`error: ${error}`)
-      console.log(`res: ${response}`)
+      console.log(`res: ${JSON.stringify(response)}`)
       if (!error && response.statusCode == 200) {
         res.send(body);
       } else {
@@ -59,7 +59,7 @@ app.get("/SearchResults", (req, res) => {
     options,
     function (error, response, body) {
       console.log(`error: ${error}`)
-      console.log(`res: ${response}`)
+      console.log(`res: ${JSON.stringify(response)}`)
       if (!error && response.statusCode == 200) {
         res.send(body);
       } else {
