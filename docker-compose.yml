@@ -8,6 +8,8 @@ services:
     networks:
       - nginxproxymanager_default
     restart: always
+    env_file:
+      - .env
     build: .
 
 networks:
