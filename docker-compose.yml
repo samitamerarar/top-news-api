@@ -6,3 +6,7 @@ services:
     build: .
     ports:
       - 5333:5000
+
+networks:
+  nginxproxymanager_default:
+    external: true
