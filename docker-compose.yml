@@ -2,10 +2,13 @@ version: '3.9'
 
 services:
   server:
-    container_name: server
-    build: .
     ports:
       - 5333:5000
+    container_name: topnews-api
+    networks:
+      - nginxproxymanager_default
+    restart: always
+    build: .
 
 networks:
   nginxproxymanager_default:
