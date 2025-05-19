@@ -6,12 +6,12 @@ services:
       - 5333:5000
     container_name: topnews-api
     networks:
-      - nginxproxymanager_default
+      - nginx-proxy-manager_default
     restart: always
     env_file:
       - .env
     build: .
 
 networks:
-  nginxproxymanager_default:
+  nginx-proxy-manager_default:
     external: true
