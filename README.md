@@ -6,4 +6,6 @@
 
 ## Execute
 
-`docker-compose up -d`
+1. Grab the API KEY from [news-api](https://newsapi.org/)
+2. Put it in .env
+3. `docker-compose up -d`
